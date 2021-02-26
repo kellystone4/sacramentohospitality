@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Modal from './modal'
 
 class NavBar extends Component {
     state = {  }

@@ -2,19 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Footer from './components/footer';
-import NavBar from './components/navbar';
 import Modal from './components/modal';
-import Homepage from './components/homepage'
+import Homepage from './pages/homepage';
+import App from './App';
+import AboutUs from './pages/aboutUs';
+import PastEvents from './pages/pastEvents'
 
 ReactDOM.render(
   <React.StrictMode>
-    <NavBar></NavBar>
-    <Homepage />
+    {/* <App></App> */}
+    {/* <Homepage /> */}
+    <PastEvents />
+    {/* <AboutUs/> */}
+      {/* <Switch>
+        <Route exact path = ""></Route>
+        <Route exact path = ""></Route>
+      </Switch> */}
     {/* <Modal></Modal> */}
-    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
