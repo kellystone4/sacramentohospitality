@@ -7,18 +7,20 @@ import Homepage from './pages/homepage';
 import App from './App';
 import AboutUs from './pages/aboutUs';
 import PastEvents from './pages/pastEvents'
+import BottomAppBar from './components/modal';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App></App> */}
     {/* <Homepage /> */}
-    <PastEvents />
-    {/* <AboutUs/> */}
+    {/* <PastEvents /> */}
+    <AboutUs/>
       {/* <Switch>
         <Route exact path = ""></Route>
         <Route exact path = ""></Route>
       </Switch> */}
-    {/* <Modal></Modal> */}
+      {/* <BottomAppBar></BottomAppBar> */}
+    {/* <Modal position="fixed"></Modal> */}
   </React.StrictMode>,
   document.getElementById('root')
   

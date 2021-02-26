@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import NavBar from '../components/navbar';
 import Footer from '../components/footer';
+import BottomAppBar from '../components/modal';
+
 
 class PastEvents extends Component {
     state = {  }
@@ -14,12 +16,13 @@ class PastEvents extends Component {
           </div> */}
           <br />
           <h1 class="title wel animate__animated animate__pulse">
-            <div id="title">Past Events</div>
+            <b><div id="title">Past Events</div></b>
           </h1>
           <p class="missionStatement">
             <b>
+                <i>
                 We couldn't have done it without you. Below are some of our wonderful contributors over the past
-                events.
+                events.</i>
             </b>
           </p>
           <br />
@@ -27,9 +30,7 @@ class PastEvents extends Component {
               <p class="getToKnowUs"><b>CLEAN YOUR CLOSET CHALLENGE (2019-2021)</b></p>
               <hr />
               <h2 class="header aboutUsInfo">
-                  <b>
-                      <div id="contributors">C O N T R I B U T O R S </div>
-                </b>
+                      <div id="contributors"><b>C O N T R I B U T O R S </b></div>
             </h2>
       <div class="grid">
         <div class="grid-sizer"></div>
@@ -99,6 +100,7 @@ class PastEvents extends Component {
                                       {/* </div> */}
                                       {/* </div> */}
                                       </div>
+                                      {/* <BottomAppBar></BottomAppBar> */}
                                       <Footer></Footer>
                                       </div>
          );

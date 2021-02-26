@@ -4,7 +4,9 @@ import NavBar from '../components/navbar';
 import Footer from '../components/footer';
 
 class Homepage extends Component {
-  state = {};
+  state = {
+
+  };
   render() {
     return (
       <div className = "homepageBackground"> 
@@ -19,7 +21,6 @@ class Homepage extends Component {
               Sacramento <br /> Hospitality Group{" "}
             </div>
           </h1>
-          <Modal></Modal>
           <p class="missionStatement">
             <i>
               "Together, we can help inspire hope,
@@ -31,6 +32,31 @@ class Homepage extends Component {
           </p>
           <br />
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <Footer></Footer>
       </div>
     );

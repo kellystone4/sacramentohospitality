@@ -35,7 +35,7 @@ export default function AnimatedModal() {
         <div>
 
             <Button onClick={handleOpen}>
-                CONTACT US
+                BLAHBLAHBLAH
             </Button>
 
             <Modal
