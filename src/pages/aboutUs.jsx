@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NavBar from '../components/navbar';
 import Footer from '../components/footer';
+// import Modal from '../components/modal';
 
 class AboutUs extends Component {
   state = {};

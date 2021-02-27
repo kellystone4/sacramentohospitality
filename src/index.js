@@ -13,8 +13,8 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <App></App> */}
     {/* <Homepage /> */}
-    {/* <PastEvents /> */}
-    <AboutUs/>
+    <PastEvents />
+    {/* <AboutUs/> */}
       {/* <Switch>
         <Route exact path = ""></Route>
         <Route exact path = ""></Route>

@@ -1,63 +1,65 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
+import React from "react";
+import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
+import Modal from "@material-ui/core/Modal";
+import Backdrop from "@material-ui/core/Backdrop";
+import Fade from "@material-ui/core/Fade";
 
-const useStyles = makeStyles(theme => ({
-    modal: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    paper: {
-        backgroundColor: theme.palette.background.paper,
-        border: '2px solid #000',
-        boxShadow: theme.shadows[5],
-        padding: theme.spacing(2, 4, 3),
-    },
+const useStyles = makeStyles((theme) => ({
+  modal: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundImage: "https://wallpaperaccess.com/full/1773222.jpg"
+
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: "2px solid #000",
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+    // backgroundImage: "https://wallpaperaccess.com/full/1773222.jpg"
+  },
 }));
 
 export default function AnimatedModal() {
-    const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
 
-    const handleOpen = () => {
-        setOpen(true);
-    };
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
-    const handleClose = () => {
-        setOpen(false);
-    };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-    return (
-        <div>
+  return (
+    <div>
+      <Button onClick={handleOpen}>CONTACT US</Button>
 
-            <Button onClick={handleOpen}>
-                BLAHBLAHBLAH
-            </Button>
-
-            <Modal
-                aria-labelledby="transition-modal-title"
-                aria-describedby="transition-modal-description"
-                className={classes.modal}
-                open={open}
-                onClose={handleClose}
-                closeAfterTransition
-                BackdropComponent={Backdrop}
-                BackdropProps={{
-                    timeout: 500,
-                }}
-            >
-                <Fade in={open}>
-                    <div className={classes.paper}>
-                {/* <div style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://wallpaperaccess.com/full/1773222.jpg)"> */}
-                     {/* <div>
+      <Modal
+        class="modalBackground"
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+          <div className={classes.paper}>
+            {/* <div style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://wallpaperaccess.com/full/1773222.jpg)"> */}
+            {/* <div>
          <div id="modal2" class="modal">
            <div class="jumbotron bg-cover text-white pic"
             style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://wallpaperaccess.com/full/1773222.jpg)"
-          >
+          >  */}
+
             <div class="modal-content">
               <div class="row">
                 <h4 class="usernameInput">CONTACT US </h4>
@@ -96,12 +98,8 @@ export default function AnimatedModal() {
               </section>
             </div>
           </div>
-        </div>
-      </div> */}
-                    {/* </div> */}
-                </div>
-                </Fade>
-            </Modal>
-        </div>
-    );
+        </Fade>
+      </Modal>
+    </div>
+  );
 }
