@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import Modal from '../components/modal'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -21,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 export default function AnimatedModal() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
@@ -33,9 +35,6 @@ export default function AnimatedModal() {
     setOpen(false);
   };
 
-  // class NavBar extends Component {
-  //     state = {  }
-  //     render() {
   return (
     <div>
       <nav>
@@ -54,26 +53,32 @@ export default function AnimatedModal() {
           </ul>
           <ul class="right hide-on-med-and-down">
             <li>
-              <a href="https://kellystone4.github.io/sacHospitalityGroup/index">
-                H O M E
-              </a>
+            {/* <Button><NavLink to="/" exact style={{ marginBottom: 40, color: 'black', textDecoration: 'none' }}> Home </NavLink></Button> */}
+              {/* <a href="https://kellystone4.github.io/sacHospitalityGroup/index"> */}
+              <Link to ='/'>H O M E </Link>
+              {/* </a> */}
             </li>
             <li>
-              <a href="https://kellystone4.github.io/sacHospitalityGroup/aboutUs">
-                A B O U T &nbsp; U S
-              </a>
+              {/* <Button onClick={() => handleButtonClick("/aboutUs")}> */}
+                {/* <NavLink to="/aboutUs"> */}
+              {/* <a href="https://kellystone4.github.io/sacHospitalityGroup/aboutUs"> */}
+              <Link to ='/aboutUs'> A B O U T &nbsp; U S</Link> 
+              {/* </a> */}
+              {/* </NavLink> */}
+              {/* </Button> */}
             </li>
             <li>
-              <a href="https://kellystone4.github.io/sacHospitalityGroup/pastEvents">
-                P A S T &nbsp; E V E N T S
-              </a>
+              {/* <a href="https://kellystone4.github.io/sacHospitalityGroup/pastEvents"> */}
+              <Link to ='/pastEvents'>  P A S T &nbsp; E V E N T S </Link>
+              {/* </a> */}
             </li>
             <li>
+            <Button onClick={handleOpen}><Modal>CONTACT US</Modal></Button>
               <a class="modal-trigger" href="#modal2"> 
                 {/* C O N T A C T &nbsp; U S */}
             
             {/* <Button onClick={handleOpen}>CONTACT US</Button> */}
-            <Modal></Modal>
+    
 
             {/* <Modal
               aria-labelledby="transition-modal-title"

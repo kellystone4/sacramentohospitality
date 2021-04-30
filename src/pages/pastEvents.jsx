@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import NavBar from '../components/navbar';
 import Footer from '../components/footer';
 import BottomAppBar from '../components/modal';
+import sacImg from '../Images/sacHosp.jpg';
 
 
 class PastEvents extends Component {
-    state = {  }
+    state = {};
     render() { 
         return ( 
             <div class="pastEventsBackground">
@@ -33,7 +34,7 @@ class PastEvents extends Component {
                       <div id="contributors"><b>C O N T R I B U T O R S </b></div>
             </h2>
       <div class="grid">
-        <div class="grid-sizer"></div>
+        {/* <div class="grid-sizer"></div> */}
         <div class="grid-item">
           <img src="https://i.ibb.co/f1H5SDs/IMG-6790.jpg" alt="IMG-6790" border="0" />
         </div>
@@ -89,14 +90,25 @@ class PastEvents extends Component {
                                       <br />
                                       <br />
                                       <br />
-                                      <p class="ccc">We had 40 partipants and over 100 donators raise awareness and donations for this event including NLB and NFL players.
-                                        Together, we raised thousands with Cups Against Covid for both local and national non-profit organizations such as the
-                                        Direct Relief Fund, World Health Organization, and United Way Sac Capital Region.
+                                      <p class="ccc">In June 2020, we created an online raffle to help raise funds for the NAACP. Our prizes consisted of a signed MLB hat, four tickets to an MLB game, 
+                                      a signed guitar from country artist Jimmy Allen, a gift card to a local lot black female owned coffee shop and more.
                                       </p>
+      <div class="grid2">
+        <div class="grid2-item">
+          <img border="0" />
+        </div>
+        <div class="grid2-item">
+          <img src="https://i.ibb.co/xsS1cB3/IMG-3826.jpg" alt="IMG-6791" border="0" />
+        </div>
+        <div class="grid2-item">
+          <img border="0" />
+        </div>
+      </div>
+
                                       {/* <div class="grid"> */}
                                         {/* <div class="pastEventsPic"> */}
-                                          <div class="pastEvents-item">
-                                          <img src="https://i.ibb.co/xsS1cB3/IMG-3826.jpg" alt="IMG-3826" border="0" />                                        </div>
+                                          {/* <div class="pastEvents-item">
+                                          <img src="https://i.ibb.co/xsS1cB3/IMG-3826.jpg" alt="IMG-3826" border="0" />                                        </div> */}
                                       {/* </div> */}
                                       {/* </div> */}
                                       </div>

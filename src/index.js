@@ -8,19 +8,33 @@ import App from './App';
 import AboutUs from './pages/aboutUs';
 import PastEvents from './pages/pastEvents'
 import BottomAppBar from './components/modal';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import Navbar from './components/navbar'
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App></App> */}
-    {/* <Homepage /> */}
-    <PastEvents />
-    {/* <AboutUs/> */}
+         <Router>
+        {/* <Navbar /> */}
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route path="/aboutUs" component={AboutUs} />
+          <Route path="/pastEvents" component={PastEvents} />
+        </Switch>
+      </Router>
+    {/* <Router>
+      
       {/* <Switch>
-        <Route exact path = ""></Route>
-        <Route exact path = ""></Route>
-      </Switch> */}
+    <Homepage />
+      <PastEvents />
+    <AboutUs/> */}
+      {/* <Switch> */}
+        {/* <Route exact path from="/" render={props => <Homepage {...props} />} /> */}
+        {/* // <Route exact path = ""></Route> */}
+      {/* </Switch> */}
       {/* <BottomAppBar></BottomAppBar> */}
     {/* <Modal position="fixed"></Modal> */}
+    {/* </Switch> */}
+    {/* </Router> */}
   </React.StrictMode>,
   document.getElementById('root')
   
@@ -29,4 +43,4 @@ ReactDOM.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// reportWebVitals();
