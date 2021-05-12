@@ -17,7 +17,7 @@ class PastEvents extends Component {
           </div> */}
           <br />
           <h1 class="title wel animate__animated animate__pulse">
-            <b><div id="title">Past Events</div></b>
+            <div id="title">Past Events</div>
           </h1>
           <p class="missionStatement">
             <b>

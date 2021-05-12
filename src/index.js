@@ -7,9 +7,10 @@ import Homepage from './pages/homepage';
 import App from './App';
 import AboutUs from './pages/aboutUs';
 import PastEvents from './pages/pastEvents'
-import BottomAppBar from './components/modal';
+// import BottomAppBar from './components/modal';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import Navbar from './components/navbar'
+// import Modal from './components/modal'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.render(
           <Route exact path="/" component={Homepage} />
           <Route path="/aboutUs" component={AboutUs} />
           <Route path="/pastEvents" component={PastEvents} />
+          {/* <Route path="/modal" component={Modal}/> */}
         </Switch>
       </Router>
     {/* <Router>

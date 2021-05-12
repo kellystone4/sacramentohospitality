@@ -7,21 +7,27 @@ import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import Modal from '../components/modal'
 import { Link } from 'react-router-dom'
+import PersistentDrawerLeft from "./TemporaryDrawer";
+import FadeMenu from "./TemporaryDrawer";
+import CustomizedMenus from "./TemporaryDrawer";
+import ResponsiveDrawer from "./TemporaryDrawer";
+import TemporaryDrawer from "./TemporaryDrawer";
+import MenuIcon from '@material-ui/icons/Menu';
+
 
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "center",
+    // backgroundColor: 'black',
   },
   paper: {
-    backgroundColor: theme.palette.background.paper,
-    // border: "2px solid #000",
+    // backgroundColor: theme.palette.background.paper,
+    // border: "200px solid #000",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
 }));
-
 
 export default function AnimatedModal() {
   const classes = useStyles();
@@ -34,6 +40,11 @@ export default function AnimatedModal() {
   const handleClose = () => {
     setOpen(false);
   };
+  // const styles = theme => ({
+  //   disabledButton: {
+  //     backgroundColor: theme.palette.primary || 'red'
+  //   }
+  // });
 
   return (
     <div>
@@ -41,7 +52,9 @@ export default function AnimatedModal() {
         <div class="nav-wrapper linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%)">
           <a class="brand-logo"></a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-            <i class="material-icons">dehaze</i>
+            <div class = "hamburger bar">
+            <Link><TemporaryDrawer><i class="material-icons">dehaze</i></TemporaryDrawer></Link>
+            </div>
           </a>
           <ul class="left hide-on-med-and-down">
             <div class="navbarTitle">
@@ -72,9 +85,16 @@ export default function AnimatedModal() {
               <Link to ='/pastEvents'>  P A S T &nbsp; E V E N T S </Link>
               {/* </a> */}
             </li>
-            <li>
-            <Button onClick={handleOpen}><Modal>CONTACT US</Modal></Button>
-              <a class="modal-trigger" href="#modal2"> 
+            {/* <Link
+    > */}
+    <li>
+    <Modal>CONTACT US</Modal>
+    </li>
+{/* </Link> */}
+            {/* <Link><Modal>CONTACT US</Modal></Link> */}
+            {/* <Button to = '/Modal'><Modal>CONTACT US</Modal></Button> */}
+            {/* <Button onClick={handleOpen}><Modal>CONTACT US</Modal></Button> */}
+              {/* <a class="modal-trigger" href="#modal2">  */}
                 {/* C O N T A C T &nbsp; U S */}
             
             {/* <Button onClick={handleOpen}>CONTACT US</Button> */}
@@ -91,31 +111,26 @@ export default function AnimatedModal() {
                 <div className={classes.paper}></div>
               </Fade>
             </Modal> */}
-            </a>{" "} 
-            </li>
+            {/* </a>{" "}  */}
           </ul>
         </div>
       </nav>
+      {/* <FadeMenu /> */}
       <ul class="sidenav" id="mobile-demo">
         <li>
-          <a href="https://kellystone4.github.io/sacHospitalityGroup/index">
+        <Link to ='/'>H O M E </Link>
             H O M E
-          </a>
         </li>
         <li>
-          <a href="https://kellystone4.github.io/sacHospitalityGroup/aboutUs">
+        <Link to ='/aboutUs'> A B O U T &nbsp; U S</Link> 
             A B O U T &nbsp; U S
-          </a>
         </li>
         <li>
-          <a href="https://kellystone4.github.io/sacHospitalityGroup/pastEvents">
+        <Link to ='/pastEvents'>  P A S T &nbsp; E V E N T S </Link>
             P A S T &nbsp; E V E N T S
-          </a>
         </li>
         <li>
-          <a href="#modal2" class="modal-trigger">
-            C O N T A C T &nbsp; U S
-          </a>
+        <li><TemporaryDrawer />C O N T A C T &nbsp; U S</li>
         </li>
       </ul>
     </div>

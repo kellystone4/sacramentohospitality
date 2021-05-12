@@ -5,6 +5,8 @@ import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import '../index.css';
+import { Link } from 'react-router-dom'
+
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -12,29 +14,37 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+      backgroundColor: "transparent",
+      padding: "18px 36px",
+      fontSize: "18px",
+      fontfamily: "Roboto",
+      color: "white"
   },
   paper: {
     // maxWidth: "1000%",
-    backgroundImage: "url(https://wallpapercave.com/wp/wp4507531.jpg)",
+    // backgroundImage: "url(https://wallpapercave.com/wp/wp4507531.jpg)",
     // background: no-repeat,
     // backgroundsize: cover,
     fontfamily: "Roboto",
     // backgroundImage: "https://wallpaperaccess.com/full/1773222.jpg",
-    border: "2px solid #000",
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
+    // border: "2px solid #000",
+    // boxShadow: theme.shadows[5],
+    // padding: theme.spacing(2, 4, 3),
     // backgroundImage: "https://wallpaperaccess.com/full/1773222.jpg"
   },
   button: {
-    fontfamily: "Cormorant Garamond",
-    fontsize: "16px",
-    color: "white",
+    fontfamily: "Roboto",
+    color: "transparent",
+    fontsize: "18px",
+    // color: "white",
     letterspacing: "3px",
+    color: 'white',
   },
   backgroundImage: {
-    backgroundImage: "url(https://wallpapercave.com/wp/wp4507531.jpg)",
+    // backgroundImage: "url(https://wallpapercave.com/wp/wp4507531.jpg)",
   }
 }));
+
 
 export default function AnimatedModal() {
   const classes = useStyles();
@@ -50,8 +60,17 @@ export default function AnimatedModal() {
 
   return (
     <div>
-      <div class="navbarTitle">
-        <Button onClick={handleOpen}>CONTACT US</Button>
+      <div class="navbarTabs">
+        <Link 
+            style={{
+              backgroundColor: "transparent",
+              // padding: "18px 20px 20px 10px",
+              // margin: "0px 10px 0px -15px",
+              fontSize: "15px",
+              fontfamily: "Roboto",
+              color: "white",
+          }}
+          variant="contained" onClick={handleOpen}>CONTACT US</Link>
       </div>
 
       <Modal
